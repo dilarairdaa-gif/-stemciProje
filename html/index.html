@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FilmŞöleni - Premium Sinema</title>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="logo">
+        <i class="fa-solid fa-film"></i> Film<span>Şöleni</span>
+      </div>
+
+      <form id="searchForm" class="search-form">
+        <input
+          type="text"
+          id="searchInput"
+          placeholder="Film veya dizi ara..."
+          autocomplete="off"
+        />
+        <button type="submit"><i class="fa-solid fa-search"></i></button>
+      </form>
+
+      <button id="watchlistBtn" class="watchlist-nav-btn">
+        <i class="fa-solid fa-heart"></i> İzleme Listem
+      </button>
+    </header>
+
+    <nav class="nav-bar genre-nav">
+      <ul id="genreList">
+        <li data-genre="Aksiyon">Aksiyon</li>
+        <li data-genre="Macera">Macera</li>
+        <li data-genre="Bilim Kurgu">Bilim Kurgu</li>
+        <li data-genre="Komedi">Komedi</li>
+        <li data-genre="Korku">Korku</li>
+        <li data-genre="Drama">Drama</li>
+      </ul>
+    </nav>
+
+    <nav class="nav-bar year-nav">
+      <ul id="yearList">
+        <li data-year="2024">2024</li>
+        <li data-year="2023">2023</li>
+        <li data-year="2022">2022</li>
+        <li data-year="2021">2021</li>
+        <li data-year="Eski">2020 ve Öncesi</li>
+      </ul>
+    </nav>
+
+    <section class="horizontal-section container-fluid">
+      <h2 class="section-title">
+        <i class="fa-solid fa-trophy"></i> Oscar Ödüllü Yapımlar
+      </h2>
+      <div class="horizontal-scroll" id="oscarGrid"></div>
+    </section>
+
+    <section class="horizontal-section container-fluid">
+      <h2 class="section-title">
+        <i class="fa-solid fa-fire"></i> En Çok İzlenenler
+      </h2>
+      <div class="horizontal-scroll" id="trendingGrid"></div>
+    </section>
+
+    <main class="container">
+      <h2 class="section-title main-list-title">
+        <i class="fa-solid fa-list"></i> Tüm Dizi ve Filmler
+      </h2>
+
+      <div id="movieGrid" class="movie-grid">
+        <div class="loader">Yükleniyor...</div>
+      </div>
+
+      <div class="pagination" id="paginationContainer"></div>
+    </main>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="../javascript/data.js"></script>
+    <script src="../javascript/script.js"></script>
+  </body>
+</html>
